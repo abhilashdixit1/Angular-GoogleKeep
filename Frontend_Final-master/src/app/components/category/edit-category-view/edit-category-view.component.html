@@ -1,0 +1,15 @@
+<!-- Label to display any error messages -->
+<label class="error-message">{{ errMessage }}</label>
+
+<mat-form-field> 
+  <input [(ngModel)]="category.categoryName" name="editName" matInput placeholder="categoryName" type="text">
+</mat-form-field>
+
+<mat-form-field>
+  <textarea [(ngModel)]="category.categoryDescription" name="editDescription" matInput placeholder="categoryDescription"></textarea>
+</mat-form-field>
+
+
+<div class="keep-c-done-wrapper">
+  <button mat-button (click)="onSave()">Save</button>
+</div>

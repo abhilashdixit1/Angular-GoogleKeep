@@ -1,0 +1,24 @@
+ .login-container{
+   display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .login-container>*{
+    width: 40%;
+  }
+
+  .register-container{
+    display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+   }
+   .register-container>*{
+     width: 40%;
+   }
+  
+  .keep-c-submit-wrapper {
+   justify-content: space-around;
+  } 
+  

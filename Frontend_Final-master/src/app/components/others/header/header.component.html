@@ -1,0 +1,11 @@
+<mat-toolbar color="primary" class="keep-c-header-component">MyNOTE<label>- {{userName}}</label>
+
+		<div class="keep-c-toggle-view">
+			<i *ngIf="isNoteView" class="material-icons switchToListView" (click)="toggle()">view_list</i>
+			<i *ngIf="!isNoteView" class="material-icons switchToNoteView" (click)="toggle()">view_quilt</i>
+			<i class="material-icons person" (click)="routeToUserSection()">person</i>	
+			<i class="material-icons directions_walk" (click)="logOut()">power_settings_new</i>		
+				
+		</div>
+		
+</mat-toolbar>

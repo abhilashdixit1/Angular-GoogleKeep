@@ -1,0 +1,43 @@
+<!-- Label to display any error messages -->
+<label class="error-message">{{ errMessage }}</label>
+
+<!-- Expansion panel to add new notes -->
+<div class="note-taker-panel">
+ <mat-expansion-panel>
+
+   <mat-expansion-panel-header>
+     <mat-panel-title>
+         Add new Note
+     </mat-panel-title>
+   </mat-expansion-panel-header>
+        
+    <div class="note-taker-form">
+        <mat-form-field>
+            <input matInput placeholder="noteTitle" name="noteTitle" [(ngModel)] = "note.noteTitle">    
+        </mat-form-field>  
+        <mat-form-field>
+            <textarea matInput placeholder="noteContent" name="noteContent" [(ngModel)] = "note.noteContent"></textarea>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-select placeholder="Category" name="category" [(ngModel)] = "note.category">
+              <mat-option *ngFor = 'let category of categories' [value]="category">
+                  {{category.categoryName}}
+                </mat-option>
+            </mat-select>
+          </mat-form-field>
+    
+          <mat-form-field>
+              <mat-select placeholder="Reminders" name="reminders" multiple [(ngModel)] = "note.reminders">
+                  <mat-option *ngFor = 'let reminder of reminders' [value]="reminder">
+                      {{reminder.reminderName}} - {{reminder.reminderType}}
+                    </mat-option>
+              </mat-select>
+          </mat-form-field>
+
+        <div class="click">
+                <i class="material-icons" (click)="addNote()" title="Add">add</i>
+        </div>
+        </div>
+    </mat-expansion-panel>
+</div>

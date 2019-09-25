@@ -1,0 +1,22 @@
+<div>
+  <mat-toolbar color="accent" color>
+    <span class="example-fill-remaining-space"></span>
+    <i class="material-icons label">note</i>
+    <p class="click" (click)="routeToNoteSection()">Notes</p>
+    <span class="example-fill-remaining-space"></span>
+    <i class="material-icons label">label</i>
+    <p class="click" (click)="routeToCategoryTab()">Categories</p>
+    <span class="example-fill-remaining-space"></span>
+    <i class="material-icons label">access_alarms</i>
+    <p class="click" (click)="routeToReminderSection()">Reminders</p>
+    <span class="example-fill-remaining-space"></span>
+  </mat-toolbar>
+</div>
+
+<div>
+  <router-outlet></router-outlet>
+  <router-outlet name="noteEditOutlet"></router-outlet>
+  <router-outlet name="categoryEditOutlet"></router-outlet>
+  <router-outlet name="reminderEditOutlet"></router-outlet>
+  <router-outlet name="userEditOutlet"></router-outlet>
+</div>

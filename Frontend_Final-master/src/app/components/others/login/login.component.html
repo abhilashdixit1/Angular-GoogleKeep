@@ -1,0 +1,58 @@
+<!-- Label to display any error messages -->
+<label *ngIf="submitMessage" class="error-message">{{submitMessage}}</label>
+<!-- Login form -->
+<div class="login-container">
+
+  <mat-form-field>
+    <input  matInput [formControl]='username' placeholder="User Name" required>
+    <mat-error *ngIf="username.invalid">{{ invalidUserName() }}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput type = 'password' [formControl]='password' placeholder="Password" required>
+    <mat-error *ngIf="password.invalid">{{ invalidPassword() }}</mat-error>
+  </mat-form-field>
+  
+  <div class="keep-c-submit-wrapper">
+    <button mat-raised-button color='primary' (click) = 'loginSubmit()'>Submit</button>
+  </div>
+  
+</div>
+
+
+<!--Register Form-->
+<div><h1>SignUP</h1></div>
+<div class="register-container">
+
+  <mat-form-field>
+    <input matInput type="userId" [formControl]='userId' placeholder="User Name" required>
+    <mat-error *ngIf="userId.invalid">{{ invalidUserName() }}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput type = 'userPassword' [formControl]='userPassword' placeholder="Password" required>
+    <mat-error *ngIf="userPassword.invalid">{{ invalidPassword() }}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput type = 'firstName' [formControl]='firstName' placeholder="First Name" required>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput type = 'lastName' [formControl]='lastName' placeholder="Last Name" required>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput type = 'userRole' [formControl]='userRole' placeholder="Role" required>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput type = 'userMobile' [formControl]='userMobile' placeholder="Mobile" required>
+  </mat-form-field>
+  
+  <div class="keep-c-submit-wrapper">
+    <button mat-raised-button color='primary' (click) = 'loginRegister()'>Register</button>
+  </div>
+  
+</div>
+

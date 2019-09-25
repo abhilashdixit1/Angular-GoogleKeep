@@ -1,0 +1,19 @@
+<mat-card class="note-card"  (click) = 'openEditView()'>
+
+  <mat-card-content>
+    <p class="note-card-title">Name: {{reminder.reminderName}}</p>
+  </mat-card-content>
+
+  <mat-card-content>
+    <p>Desc: {{reminder.reminderDescription}} </p>
+  </mat-card-content>
+
+  <mat-card-content>
+    <p>Frequency : {{reminder.reminderType}}</p>
+  </mat-card-content>
+  
+</mat-card>
+<div class="delicon">
+    <i class="material-icons clear" (click)="deleteReminder()">clear</i>  
+    <i class="material-icons create" (click)="openEditView()">create</i> 
+</div>

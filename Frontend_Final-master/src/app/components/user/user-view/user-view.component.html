@@ -1,0 +1,12 @@
+
+<div>
+  <mat-card class = 'note-card'>
+      <mat-card-title class='note-card-title'>{{user.userId}}</mat-card-title>
+      <mat-card-content>{{user.userName}}</mat-card-content>
+      <mat-card-content>{{user.userMobile}}</mat-card-content>
+  </mat-card>
+</div>
+<div class="delicon">
+  <i class="material-icons clear" (click)="delete()">clear</i>  
+  <i class="material-icons create" (click)="openEditView()">create</i> 
+</div>

@@ -1,0 +1,12 @@
+<mat-card class="note-card"  (click) = 'openEditView()'>
+    <mat-card-content>
+      <p class="note-card-title">{{category.categoryName}}</p>
+    </mat-card-content>
+    <mat-card-content>
+      <p>{{category.categoryDescription}} </p>
+    </mat-card-content>
+</mat-card>
+<div class="delicon">
+    <i class="material-icons clear" (click)="deleteCategory()">clear</i>  
+    <i class="material-icons create" (click)="openEditView()">create</i> 
+</div>

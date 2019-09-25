@@ -1,0 +1,22 @@
+<div>
+    <mat-card class = 'note-card' (click) = 'openEditView()'>
+        <mat-card-title class='note-card-title'>{{note.noteTitle}}</mat-card-title>
+        <mat-card-content>{{note.noteContent}}</mat-card-content>
+        <mat-card-content class="note-category"> 
+            <i class="material-icons label">label</i> {{note.category.categoryName}}
+        </mat-card-content>
+        <div>
+            <span *ngFor = 'let reminder of note.reminders'>
+            <i class="material-icons access_alarms">access_alarms</i> {{reminder.reminderName}} </span>
+        </div>  
+    </mat-card>
+</div>
+<div class="delicon">
+    <i class="material-icons clear" (click)="deleteNote()">clear</i>  
+    <i class="material-icons create" (click)="openEditView()">create</i> 
+</div>
+
+
+
+    
+  

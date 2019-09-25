@@ -1,0 +1,12 @@
+<!-- Label to display any error messages -->
+<label class="error-message">{{ errMessage }}</label>
+<div class="keep-c-note-serch">
+  <input #textbox type="text" [(ngModel)]="textValue" />
+  <i class="material-icons search " (click)="filterText(textbox.value)"
+    >search</i
+  >
+</div>
+<div class="keep-c-note-container">
+  <!-- Include the notes collection with each note rendered as a separate NoteComponent -->
+  <app-note [note]="note" *ngFor="let note of notes"> </app-note>
+</div>

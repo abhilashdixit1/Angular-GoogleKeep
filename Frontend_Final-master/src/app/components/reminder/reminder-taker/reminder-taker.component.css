@@ -1,0 +1,21 @@
+.error-message{
+	color: red;
+}
+.note-taker-panel {
+  width: 50vw;
+	margin: auto;
+	padding: 1em 0;
+}
+
+.note-taker-form {
+	display: flex;
+	flex-direction: column;
+}
+
+.click{
+	cursor:pointer;
+
+}
+.material-icons{
+	font-size: 3em;
+}

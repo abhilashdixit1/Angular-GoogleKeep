@@ -1,0 +1,13 @@
+.keep-c-list-view-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.keep-c-list-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding-right: 2em;   
+}
+

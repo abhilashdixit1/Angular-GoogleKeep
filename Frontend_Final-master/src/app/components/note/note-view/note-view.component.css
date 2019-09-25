@@ -1,0 +1,17 @@
+.keep-c-note-container{
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    margin: 20px;
+  }
+
+.keep-c-note-serch{
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  margin: 35px;
+}
+  
+.error-message{
+  color: red;
+}

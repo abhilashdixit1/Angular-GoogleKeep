@@ -1,0 +1,28 @@
+<!-- Label to display any error messages -->
+<label>{{ errMessage }}</label>
+
+<!-- Expansion panel to add new notes -->
+<div class="note-taker-panel">
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+        <mat-panel-title>
+            Add New Category
+        </mat-panel-title>       
+        </mat-expansion-panel-header>
+
+        <div class ="note-taker-form">
+    
+          <mat-form-field>
+            <input matInput placeholder="Category name" [(ngModel)] = "category.categoryName" name="categoryName">
+          </mat-form-field>
+    
+          <mat-form-field>
+            <input matInput placeholder="Category Description" [(ngModel)] = "category.categoryDescription" name="categoryDescription">
+          </mat-form-field>
+        <div class="click">
+          <i class="material-icons" (click)="addCategory()" title="Add">add</i>
+        </div>
+        </div> 
+    
+      </mat-expansion-panel>
+</div>

@@ -1,0 +1,38 @@
+<!-- Label to display any error messages -->
+<label class="error-message">{{ errMessage }}</label>
+
+<mat-form-field> 
+  <input [(ngModel)]="note.noteTitle" name="editTitle" matInput placeholder="noteTitle" type="text">
+</mat-form-field>
+
+<mat-form-field>
+  <textarea [(ngModel)]="note.noteContent" name="editText" matInput placeholder="noteContent"></textarea>
+</mat-form-field>
+
+<mat-form-field>
+  <mat-select placeholder="Category" name="category" [(ngModel)] = "note.category">
+    <mat-option *ngFor = 'let category of categories' [value]="category">
+        {{category.categoryName}}
+      </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field>
+<mat-select name="editStatus" placeholder="Select state" [(ngModel)]="note.noteStatus">
+  <mat-option *ngFor="let state of states" [value]="state">
+    {{ state }}
+  </mat-option>
+</mat-select>
+</mat-form-field>
+
+<mat-form-field>
+  <mat-select placeholder="Reminders" name="reminders" multiple [(ngModel)] = "note.reminders">
+      <mat-option *ngFor = 'let reminder of reminders' [value]="reminder">
+          {{reminder.reminderName}} - {{reminder.reminderType}}
+        </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<div class="keep-c-done-wrapper">
+  <button mat-button (click)="onSave()">Save</button>
+</div>
